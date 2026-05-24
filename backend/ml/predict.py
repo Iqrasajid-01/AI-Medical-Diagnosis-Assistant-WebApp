@@ -2,23 +2,44 @@ import os, json, pickle
 import numpy as np
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+os.environ['TF_USE_LEGACY_KERLAS'] = '0'
 from tensorflow import keras
+from tensorflow.keras import layers
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BACKEND_DIR = os.path.dirname(SCRIPT_DIR)
 ML_ASSETS_DIR = os.path.join(BACKEND_DIR, 'static', 'ml_assets')
+
+MODEL_CONFIGS = {
+    'diabetes':   {'layers': [256, 128, 64, 32], 'dropout': 0.3},
+    'heart':      {'layers': [256, 128, 64, 32], 'dropout': 0.3},
+    'parkinsons': {'layers': [128, 64, 32, 16],  'dropout': 0.25},
+}
 
 _cache = {}
 
 def _get_asset_path(filename):
     return os.path.join(ML_ASSETS_DIR, filename)
 
+def _build_model(input_dim, cfg, name):
+    layers_cfg = cfg['layers']
+    dropout = cfg['dropout']
+    model = keras.Sequential(name=name)
+    model.add(layers.Input(shape=(input_dim,)))
+    for i, units in enumerate(layers_cfg):
+        model.add(layers.Dense(units, activation='relu'))
+        model.add(layers.BatchNormalization())
+        d = dropout if i < len(layers_cfg) - 1 else dropout * 0.7
+        model.add(layers.Dropout(d))
+    model.add(layers.Dense(1, activation='sigmoid'))
+    model.compile(optimizer=keras.optimizers.Adam(0.0005), loss='binary_crossentropy', metrics=['accuracy'])
+    return model
+
 def _encode_input(input_data, meta, categorical_mappings):
     features = meta['features']
     vals = []
     for col in features:
         val = input_data.get(col)
-        # Handle categorical encoding
         if categorical_mappings and col in categorical_mappings:
             mapping = categorical_mappings[col]
             if val is not None and str(val) in mapping:
@@ -35,6 +56,7 @@ def _load_model(disease):
         return _cache[disease]
     scaler_path = _get_asset_path(f'{disease}_scaler.pkl')
     meta_path = _get_asset_path(f'{disease}_meta.json')
+    weights_path = _get_asset_path(f'{disease}_model.weights.h5')
     keras_path = _get_asset_path(f'{disease}_model.keras')
     pkl_path = _get_asset_path(f'{disease}_model.pkl')
 
@@ -48,7 +70,14 @@ def _load_model(disease):
             scaler = pickle.load(f)
     model = None
     model_type = 'keras'
-    if os.path.exists(keras_path):
+
+    if os.path.exists(weights_path):
+        cfg = MODEL_CONFIGS.get(disease, {'layers': [64, 32, 16], 'dropout': 0.3})
+        input_dim = len(meta.get('features', []))
+        model = _build_model(input_dim, cfg, disease)
+        model.load_weights(weights_path)
+        model_type = 'keras'
+    elif os.path.exists(keras_path):
         model = keras.models.load_model(keras_path)
         model_type = 'keras'
     elif os.path.exists(pkl_path):
@@ -56,7 +85,7 @@ def _load_model(disease):
             model = pickle.load(f)
         model_type = 'pickle'
     else:
-        raise FileNotFoundError(f"Model not found for '{disease}' (tried {keras_path} and {pkl_path}). Train the model first.")
+        raise FileNotFoundError(f"Model not found for '{disease}'. Train the model first.")
     _cache[disease] = {'model': model, 'model_type': model_type, 'scaler': scaler, 'meta': meta}
     return _cache[disease]
 
