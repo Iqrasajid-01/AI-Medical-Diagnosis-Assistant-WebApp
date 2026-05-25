@@ -51,37 +51,25 @@ def _encode_input(input_data, meta, categorical_mappings):
         vals.append(float(val))
     return np.array([vals])
 
-def _strip_qconfig(obj):
-    if isinstance(obj, dict):
-        obj.pop('quantization_config', None)
-        for v in obj.values():
-            _strip_qconfig(v)
-    elif isinstance(obj, list):
-        for item in obj:
-            _strip_qconfig(item)
-
-def _load_keras_safe(path):
+def _load_keras_safe(disease, keras_path, meta):
     try:
-        return keras.models.load_model(path)
+        return keras.models.load_model(keras_path)
     except (TypeError, ValueError) as e:
         if 'quantization_config' not in str(e):
             raise
-    with zipfile.ZipFile(path, 'r') as z:
-        config = json.loads(z.read('config.json').decode('utf-8'))
-        _strip_qconfig(config)
-        tmp = tempfile.NamedTemporaryFile(suffix='.keras', delete=False)
-        tmp_name = tmp.name
+    cfg = MODEL_CONFIGS.get(disease, {'layers': [64, 32, 16], 'dropout': 0.3})
+    input_dim = len(meta.get('features', []))
+    model = _build_model(input_dim, cfg, disease)
+    with zipfile.ZipFile(keras_path, 'r') as z:
+        weights_data = z.read('model.weights.h5')
+    tmp = tempfile.NamedTemporaryFile(suffix='.weights.h5', delete=False)
+    try:
+        tmp.write(weights_data)
         tmp.close()
-        with zipfile.ZipFile(tmp_name, 'w', zipfile.ZIP_DEFLATED) as zout:
-            for item in z.infolist():
-                if item.filename == 'config.json':
-                    zout.writestr(item, json.dumps(config))
-                else:
-                    zout.writestr(item, z.read(item.filename))
-        try:
-            return keras.models.load_model(tmp_name)
-        finally:
-            os.unlink(tmp_name)
+        model.load_weights(tmp.name)
+    finally:
+        os.unlink(tmp.name)
+    return model
 
 def _load_model(disease):
     if disease in _cache:
@@ -110,7 +98,7 @@ def _load_model(disease):
         model.load_weights(weights_path)
         model_type = 'keras'
     elif os.path.exists(keras_path):
-        model = _load_keras_safe(keras_path)
+        model = _load_keras_safe(disease, keras_path, meta)
         model_type = 'keras'
     elif os.path.exists(pkl_path):
         with open(pkl_path, 'rb') as f:
