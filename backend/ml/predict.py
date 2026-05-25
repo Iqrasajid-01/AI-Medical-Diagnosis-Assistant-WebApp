@@ -1,10 +1,31 @@
-import os, json, pickle
+import os, json, pickle, functools
 import numpy as np
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ['TF_USE_LEGACY_KERLAS'] = '0'
 from tensorflow import keras
 from tensorflow.keras import layers
+
+
+def _patch_keras():
+    _patched = {}
+    for name in ['Dense', 'BatchNormalization', 'Dropout', 'InputLayer']:
+        cls = getattr(layers, name)
+        orig = cls.__init__
+
+        @functools.wraps(orig)
+        def new_init(self, *args, __orig=orig, **kwargs):
+            kwargs.pop('quantization_config', None)
+            __orig(self, *args, **kwargs)
+
+        cls.__init__ = new_init
+        _patched[name] = (cls, orig)
+    return _patched
+
+
+def _unpatch_keras(patched):
+    for _, (cls, orig) in patched.items():
+        cls.__init__ = orig
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BACKEND_DIR = os.path.dirname(SCRIPT_DIR)
@@ -78,7 +99,16 @@ def _load_model(disease):
         model.load_weights(weights_path)
         model_type = 'keras'
     elif os.path.exists(keras_path):
-        model = keras.models.load_model(keras_path)
+        try:
+            model = keras.models.load_model(keras_path)
+        except (TypeError, ValueError) as _e:
+            if 'quantization_config' not in str(_e):
+                raise
+            _patched = _patch_keras()
+            try:
+                model = keras.models.load_model(keras_path)
+            finally:
+                _unpatch_keras(_patched)
         model_type = 'keras'
     elif os.path.exists(pkl_path):
         with open(pkl_path, 'rb') as f:
