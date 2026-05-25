@@ -14,8 +14,7 @@ def _patch_keras():
         orig = cls.__init__
 
         @functools.wraps(orig)
-        def new_init(self, *args, __orig=orig, **kwargs):
-            kwargs.pop('quantization_config', None)
+        def new_init(self, *args, quantization_config=None, __orig=orig, **kwargs):
             __orig(self, *args, **kwargs)
 
         cls.__init__ = new_init
