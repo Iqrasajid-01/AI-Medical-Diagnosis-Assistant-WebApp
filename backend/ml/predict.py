@@ -1,30 +1,10 @@
-import os, json, pickle, functools
+import os, json, pickle, zipfile, tempfile
 import numpy as np
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ['TF_USE_LEGACY_KERLAS'] = '0'
 from tensorflow import keras
 from tensorflow.keras import layers
-
-
-def _patch_keras():
-    _patched = {}
-    for name in ['Dense', 'BatchNormalization', 'Dropout', 'InputLayer']:
-        cls = getattr(layers, name)
-        orig = cls.__init__
-
-        @functools.wraps(orig)
-        def new_init(self, *args, quantization_config=None, __orig=orig, **kwargs):
-            __orig(self, *args, **kwargs)
-
-        cls.__init__ = new_init
-        _patched[name] = (cls, orig)
-    return _patched
-
-
-def _unpatch_keras(patched):
-    for _, (cls, orig) in patched.items():
-        cls.__init__ = orig
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BACKEND_DIR = os.path.dirname(SCRIPT_DIR)
@@ -71,6 +51,38 @@ def _encode_input(input_data, meta, categorical_mappings):
         vals.append(float(val))
     return np.array([vals])
 
+def _strip_qconfig(obj):
+    if isinstance(obj, dict):
+        obj.pop('quantization_config', None)
+        for v in obj.values():
+            _strip_qconfig(v)
+    elif isinstance(obj, list):
+        for item in obj:
+            _strip_qconfig(item)
+
+def _load_keras_safe(path):
+    try:
+        return keras.models.load_model(path)
+    except (TypeError, ValueError) as e:
+        if 'quantization_config' not in str(e):
+            raise
+    with zipfile.ZipFile(path, 'r') as z:
+        config = json.loads(z.read('config.json').decode('utf-8'))
+        _strip_qconfig(config)
+        tmp = tempfile.NamedTemporaryFile(suffix='.keras', delete=False)
+        tmp_name = tmp.name
+        tmp.close()
+        with zipfile.ZipFile(tmp_name, 'w', zipfile.ZIP_DEFLATED) as zout:
+            for item in z.infolist():
+                if item.filename == 'config.json':
+                    zout.writestr(item, json.dumps(config))
+                else:
+                    zout.writestr(item, z.read(item.filename))
+        try:
+            return keras.models.load_model(tmp_name)
+        finally:
+            os.unlink(tmp_name)
+
 def _load_model(disease):
     if disease in _cache:
         return _cache[disease]
@@ -98,16 +110,7 @@ def _load_model(disease):
         model.load_weights(weights_path)
         model_type = 'keras'
     elif os.path.exists(keras_path):
-        try:
-            model = keras.models.load_model(keras_path)
-        except (TypeError, ValueError) as _e:
-            if 'quantization_config' not in str(_e):
-                raise
-            _patched = _patch_keras()
-            try:
-                model = keras.models.load_model(keras_path)
-            finally:
-                _unpatch_keras(_patched)
+        model = _load_keras_safe(keras_path)
         model_type = 'keras'
     elif os.path.exists(pkl_path):
         with open(pkl_path, 'rb') as f:
