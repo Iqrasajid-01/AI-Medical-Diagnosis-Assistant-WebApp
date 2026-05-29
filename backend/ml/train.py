@@ -170,11 +170,15 @@ def train_diabetes():
     print(f"  After SMOTE: {X_train_res.shape[0]} samples")
     X_train_final, X_val, y_train_final, y_val = train_test_split(X_train_res, y_train_res, test_size=0.15, random_state=42, stratify=y_train_res)
 
+    LABEL_SMOOTHING = 0.08
+    y_train_final = y_train_final * (1 - 2 * LABEL_SMOOTHING) + LABEL_SMOOTHING
+    y_val_smooth = y_val * (1 - 2 * LABEL_SMOOTHING) + LABEL_SMOOTHING
+
     model = build_deep_ann(X_train.shape[1], 'diabetes')
     history = model.fit(
         X_train_final, y_train_final,
         epochs=100, batch_size=512,
-        validation_data=(X_val, y_val),
+        validation_data=(X_val, y_val_smooth),
         callbacks=[
             keras.callbacks.EarlyStopping(monitor='val_loss', patience=15, restore_best_weights=True, verbose=0),
             keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=8, min_lr=1e-7, verbose=0),

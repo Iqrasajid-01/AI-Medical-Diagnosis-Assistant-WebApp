@@ -12,5 +12,8 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 ENV PYTHONPATH=/app
 EXPOSE 7860
 
+# Ensure instance directory is writable by the non-root user
+RUN mkdir -p /app/instance && chown -R user:user /app
+
 USER user
 CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:7860", "api.index:app"]

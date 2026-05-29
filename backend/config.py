@@ -21,11 +21,15 @@ class Config:
         os.urandom(32).hex() if ON_VERCEL else 'medical-ai-secret-key-2024'
     )
 
+    # Use /tmp for instance folder on cloud platforms (permissions + ephemeral)
+    if ON_VERCEL or ON_HUGGINGFACE:
+        INSTANCE_PATH = '/tmp/instance'
+
     # Database — use env DATABASE_URL on Vercel (PostgreSQL recommended),
-    # fall back to /tmp/ SQLite (non-persistent, ephemeral filesystem)
+    # fall back to /tmp/ SQLite (ephemeral filesystem on cloud platforms)
     _default_db = (
         'sqlite:////tmp/medical_ai.db'
-        if ON_VERCEL
+        if (ON_VERCEL or ON_HUGGINGFACE)
         else 'sqlite:///medical_ai.db'
     )
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', _default_db)
@@ -34,8 +38,8 @@ class Config:
     # JWT
     JWT_EXPIRATION_HOURS = int(os.getenv('JWT_EXPIRATION_HOURS', '24'))
 
-    # File uploads — /tmp on Vercel (read-only elsewhere)
-    _default_upload = '/tmp/uploads' if ON_VERCEL else 'uploads'
+    # File uploads — /tmp on cloud platforms (permissions + ephemeral)
+    _default_upload = '/tmp/uploads' if (ON_VERCEL or ON_HUGGINGFACE) else 'uploads'
     UPLOAD_FOLDER = os.path.join(
         BACKEND_DIR, os.getenv('UPLOAD_FOLDER', _default_upload)
     )

@@ -10,7 +10,7 @@ from backend.routes.admin import admin_bp
 
 
 def create_app(config_class=Config):
-    app = Flask(__name__)
+    app = Flask(__name__, instance_path=getattr(config_class, 'INSTANCE_PATH', None))
     app.config.from_object(config_class)
 
     CORS(app, origins=Config.CORS_ORIGINS)
