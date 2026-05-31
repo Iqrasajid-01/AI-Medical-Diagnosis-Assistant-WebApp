@@ -203,27 +203,63 @@ def predict_heart(input_data):
         'disease': 'heart',
     }
 
+def _add_parkinsons_interactions(features_dict, meta):
+    """Compute interaction features from base acoustic features.
+
+    The model was trained with 22 base + 28 pairwise interaction features
+    (top 8 features by correlation with target). This function recreates
+    those interactions from the extracted base features.
+    """
+    base_features = meta.get('base_features', [])
+    interaction_features = meta.get('interaction_features', [])
+
+    def _match_prefix(prefix):
+        """Find the base feature whose first 8 chars match *prefix*.
+        If multiple match, return the first one (best-effort heuristic
+        since 8-char truncation can collide, e.g. MDVP:Shimmer vs
+        MDVP:Shimmer(dB)).
+        """
+        for f in base_features:
+            if f[:8] == prefix:
+                return f
+        return None
+
+    result = dict(features_dict)
+    for name in interaction_features:
+        parts = name.split('_', 1)
+        if len(parts) == 2:
+            p1, p2 = parts
+            f1 = _match_prefix(p1)
+            f2 = _match_prefix(p2)
+            if f1 and f2:
+                v1 = float(features_dict.get(f1, 0.0))
+                v2 = float(features_dict.get(f2, 0.0))
+                result[name] = v1 * v2
+    return result
+
+
 def predict_parkinsons(features_dict):
     assets = _load_model('parkinsons')
     meta = assets['meta']
     th = _get_threshold(meta)
+
+    complete = _add_parkinsons_interactions(features_dict, meta)
+
     features = meta['features']
     vals = []
     for col in features:
-        vals.append(float(features_dict.get(col, 0.0)))
+        vals.append(float(complete.get(col, 0.0)))
     X = np.array([vals])
     X_scaled = assets['scaler'].transform(X) if assets['scaler'] else X
     if assets['model_type'] == 'pickle':
         prob = float(assets['model'].predict_proba(X_scaled)[:, 1][0])
     else:
         prob = float(assets['model'].predict(X_scaled, verbose=0)[0][0])
-    confidence = round(2.0 * abs(prob - th), 4)
-    risk_level = _classify_risk_tuned(prob, th)
     return {
         'prediction': int(prob > th),
-        'confidence': confidence,
+        'confidence': round(prob, 4),
         'raw_probability': round(prob, 4),
-        'risk_level': risk_level,
+        'risk_level': _classify_risk_tuned(prob, th),
         'disease': 'parkinsons',
         'extracted_features': features_dict,
     }

@@ -25,12 +25,13 @@ class Config:
     if ON_VERCEL or ON_HUGGINGFACE:
         INSTANCE_PATH = '/tmp/instance'
 
-    # Database — use env DATABASE_URL on Vercel (PostgreSQL recommended),
-    # fall back to /tmp/ SQLite (ephemeral filesystem on cloud platforms)
+    # Database — use absolute path to avoid Flask instance path ambiguity.
+    # On cloud platforms use /tmp/ (ephemeral); locally use backend/instance/.
+    _local_db = os.path.join(BACKEND_DIR, 'instance', 'medical_ai.db')
     _default_db = (
         'sqlite:////tmp/medical_ai.db'
         if (ON_VERCEL or ON_HUGGINGFACE)
-        else 'sqlite:///medical_ai.db'
+        else f'sqlite:///{_local_db}'
     )
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', _default_db)
     SQLALCHEMY_TRACK_MODIFICATIONS = False

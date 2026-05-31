@@ -24,6 +24,14 @@ def create_app(config_class=Config):
     os.makedirs(app.config['ML_ASSETS_DIR'], exist_ok=True)
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
+    # Ensure SQLite database directory exists (prevents instance-path ambiguity)
+    _db_uri = app.config['SQLALCHEMY_DATABASE_URI']
+    if _db_uri.startswith('sqlite:///'):
+        _db_file = _db_uri[len('sqlite:///'):]
+        _db_dir = os.path.dirname(_db_file)
+        if _db_dir:
+            os.makedirs(_db_dir, exist_ok=True)
+
     with app.app_context():
         db.create_all()
 

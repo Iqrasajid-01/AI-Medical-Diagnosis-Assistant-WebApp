@@ -12,6 +12,7 @@ matplotlib
 seaborn
 reportlab
 python-dotenv
+psycopg2-binary
 librosa
 praat-parselmouth
 soundfile
