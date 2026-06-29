@@ -13,10 +13,19 @@
     "ST_Slope",
     "age_maxhr",
     "oldpeak_restingbp",
-    "restingbp_chol",
+    "oldpeak_maxhr",
+    "age_oldpeak",
+    "maxhr_age_ratio",
+    "oldpeak_binary",
+    "chol_zero",
+    "age_sq",
     "maxhr_sq",
     "oldpeak_sq",
-    "chol_zero"
+    "restingbp_age",
+    "maxhr_oldpeak",
+    "age_Chol",
+    "age_restingbp",
+    "chol_maxhr"
   ],
   "base_features": [
     "Age",
@@ -34,10 +43,19 @@
   "engineered_features": [
     "age_maxhr",
     "oldpeak_restingbp",
-    "restingbp_chol",
+    "oldpeak_maxhr",
+    "age_oldpeak",
+    "maxhr_age_ratio",
+    "oldpeak_binary",
+    "chol_zero",
+    "age_sq",
     "maxhr_sq",
     "oldpeak_sq",
-    "chol_zero"
+    "restingbp_age",
+    "maxhr_oldpeak",
+    "age_Chol",
+    "age_restingbp",
+    "chol_maxhr"
   ],
   "categorical_mappings": {
     "Sex": {
@@ -65,5 +83,14 @@
       "Up": 2
     }
   },
-  "best_threshold": 0.44000000000000006
+  "best_threshold": 0.5000000000000001,
+  "model_type": "keras",
+  "model_architecture": {
+    "layers": [
+      128,
+      64,
+      32
+    ],
+    "dropout": 0.3
+  }
 }

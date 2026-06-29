@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python *)",
+      "Bash(curl *)",
+      "Bash(taskkill *)",
+      "Bash(timeout *)",
+      "Bash(npm run *)",
+      "Bash(type *)",
+      "Bash(set *)",
+      "Bash(findstr *)",
+      "Bash(del *)",
+      "Bash(netstat *)",
+      "Bash(.venv\\scripts\\activate)",
+      "Bash(dir *)",
+      "Bash(ping *)"
+    ]
+  },
+  "$version": 4
+}

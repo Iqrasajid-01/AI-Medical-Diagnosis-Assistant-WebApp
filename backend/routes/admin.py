@@ -150,8 +150,11 @@ def model_info(current_user, disease):
         with open(hm_path, 'rb') as f:
             hm_b64 = base64.b64encode(f.read()).decode('utf-8')
 
-    # Check if model exists
-    model_exists = os.path.exists(os.path.join(ml_dir, f'{disease}_model.keras'))
+    # Check if model exists (prefer .weights.h5 over .keras)
+    model_exists = (
+        os.path.exists(os.path.join(ml_dir, f'{disease}_model.weights.h5')) or
+        os.path.exists(os.path.join(ml_dir, f'{disease}_model.keras'))
+    )
 
     return jsonify({
         'disease': disease,

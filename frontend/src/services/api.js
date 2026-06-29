@@ -71,4 +71,21 @@ export const adminUploadDataset = (diseaseType, formData) =>
     headers: { 'Content-Type': 'multipart/form-data' },
   });
 
+// ── Doctors ─────────────────────────────────
+export const searchNearbyDoctors = (params) =>
+  api.post('/doctors/nearby', params);
+
+// ── Appointments ────────────────────────────
+export const bookAppointment = (data) =>
+  api.post('/appointments/book', data);
+
+export const getAppointments = () =>
+  api.get('/appointments');
+
+export const getAppointment = (id) =>
+  api.get(`/appointments/${id}`);
+
+export const cancelAppointment = (id) =>
+  api.post(`/appointments/${id}/cancel`);
+
 export default api;

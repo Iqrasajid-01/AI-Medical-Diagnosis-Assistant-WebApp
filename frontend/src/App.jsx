@@ -9,6 +9,7 @@ import RegisterPage from './pages/RegisterPage';
 import Dashboard from './pages/Dashboard';
 import Prediction from './pages/Prediction';
 import History from './pages/History';
+import Appointments from './pages/Appointments';
 import AdminDashboard from './pages/AdminDashboard';
 
 function ProtectedRoute({ children }) {
@@ -53,6 +54,11 @@ function AppRoutes() {
       <Route path="/history" element={
         <ProtectedRoute>
           <AppLayout><History /></AppLayout>
+        </ProtectedRoute>
+      } />
+      <Route path="/appointments" element={
+        <ProtectedRoute>
+          <AppLayout><Appointments /></AppLayout>
         </ProtectedRoute>
       } />
       <Route path="/admin" element={

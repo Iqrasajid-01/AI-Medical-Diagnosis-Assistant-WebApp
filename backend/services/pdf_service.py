@@ -154,9 +154,9 @@ def generate_prediction_pdf(prediction_record, user):
 
     # Risk level
     conf = prediction_record.confidence
-    if conf >= 0.75:
+    if conf >= 0.80:
         risk = 'High'
-    elif conf >= 0.45:
+    elif conf >= 0.40:
         risk = 'Moderate'
     else:
         risk = 'Low'

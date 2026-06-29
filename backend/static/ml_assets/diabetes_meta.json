@@ -7,7 +7,47 @@
     "smoking_history",
     "bmi",
     "HbA1c_level",
+    "blood_glucose_level",
+    "bmi_age",
+    "glucose_hba1c",
+    "bmi_obese",
+    "age_hypertension",
+    "glucose_sq",
+    "hba1c_sq",
+    "bmi_hba1c",
+    "age_glucose",
+    "glucose_hba1c_ratio",
+    "age_bmi",
+    "glucose_hba1c_interaction",
+    "bmi_hba1c_interaction",
+    "age_heart",
+    "bmi_glucose"
+  ],
+  "base_features": [
+    "gender",
+    "age",
+    "hypertension",
+    "heart_disease",
+    "smoking_history",
+    "bmi",
+    "HbA1c_level",
     "blood_glucose_level"
+  ],
+  "engineered_features": [
+    "bmi_age",
+    "glucose_hba1c",
+    "bmi_obese",
+    "age_hypertension",
+    "glucose_sq",
+    "hba1c_sq",
+    "bmi_hba1c",
+    "age_glucose",
+    "glucose_hba1c_ratio",
+    "age_bmi",
+    "glucose_hba1c_interaction",
+    "bmi_hba1c_interaction",
+    "age_heart",
+    "bmi_glucose"
   ],
   "categorical_mappings": {
     "gender": {
@@ -24,5 +64,14 @@
       "not current": 5
     }
   },
-  "best_threshold": 0.8000000000000002
+  "best_threshold": 0.9400000000000002,
+  "model_type": "keras",
+  "model_architecture": {
+    "layers": [
+      64,
+      32,
+      16
+    ],
+    "dropout": 0.3
+  }
 }

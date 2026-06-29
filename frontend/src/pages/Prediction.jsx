@@ -7,6 +7,7 @@ import NeonButton from '../components/UI/NeonButton';
 import ConfidenceBar from '../components/UI/ConfidenceBar';
 import RiskBadge from '../components/UI/RiskBadge';
 import DisclaimerBanner from '../components/UI/DisclaimerBanner';
+import DoctorRecommendation from '../components/UI/DoctorRecommendation';
 
 const DISEASE_TABS = [
   { key: 'diabetes', label: 'Diabetes', icon: '🩸' },
@@ -70,7 +71,7 @@ function SelectField({ label, name, value, onChange, options, required, tooltip 
   );
 }
 
-function ResultCard({ result, onReset }) {
+function ResultCard({ result, onReset, onFindDoctors }) {
   const riskLevel = result.risk_level?.toLowerCase() || 'low';
   const confidencePct = (result.confidence * 100).toFixed(1);
 
@@ -100,6 +101,18 @@ function ResultCard({ result, onReset }) {
             <RiskBadge level={riskLevel} />
           </div>
         </div>
+
+        {(riskLevel === 'high' || riskLevel === 'moderate') && (
+          <div className="mb-4">
+            <button
+              onClick={onFindDoctors}
+              className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white font-medium transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary-500/25"
+            >
+              <span className="text-xl">🏥</span>
+              Find Nearby Doctors
+            </button>
+          </div>
+        )}
 
         <DisclaimerBanner className="mb-4" />
 
@@ -471,6 +484,7 @@ function ParkinsonsForm({ onResult }) {
 export default function Prediction() {
   const [activeTab, setActiveTab] = useState('diabetes');
   const [result, setResult] = useState(null);
+  const [showDoctors, setShowDoctors] = useState(false);
 
   return (
     <div className="space-y-6">
@@ -501,7 +515,11 @@ export default function Prediction() {
           <GlassCard>
             <h2 className="text-lg font-semibold text-white mb-4 capitalize">{activeTab} Risk Assessment</h2>
             {result ? (
-              <ResultCard result={result} onReset={() => setResult(null)} />
+              <ResultCard
+                result={result}
+                onReset={() => setResult(null)}
+                onFindDoctors={() => setShowDoctors(true)}
+              />
             ) : (
               <>
                 {activeTab === 'diabetes' && <DiabetesForm onResult={setResult} />}
@@ -557,6 +575,13 @@ export default function Prediction() {
           </GlassCard>
         </div>
       </div>
+
+      {showDoctors && result && (
+        <DoctorRecommendation
+          result={result}
+          onClose={() => setShowDoctors(false)}
+        />
+      )}
     </div>
   );
 }

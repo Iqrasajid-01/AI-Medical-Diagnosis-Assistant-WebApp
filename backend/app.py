@@ -1,5 +1,6 @@
 import os
 import json
+import sys
 from flask import Flask
 from flask_cors import CORS
 from backend.config import Config
@@ -7,6 +8,8 @@ from backend.models.db_models import db
 from backend.routes.auth import auth_bp
 from backend.routes.prediction import prediction_bp
 from backend.routes.admin import admin_bp
+from backend.routes.doctors import doctors_bp
+from backend.routes.appointments import appointments_bp
 
 
 def create_app(config_class=Config):
@@ -15,25 +18,43 @@ def create_app(config_class=Config):
 
     CORS(app, origins=Config.CORS_ORIGINS)
 
+    # PostgreSQL pool settings for Neon
+    _db_uri = app.config['SQLALCHEMY_DATABASE_URI']
+    if 'postgresql' in _db_uri:
+        app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
+            'pool_size': 5,
+            'max_overflow': 10,
+            'pool_pre_ping': True,
+            'pool_recycle': 300,
+        }
+        print(f"[DB] Using PostgreSQL (Neon): {_db_uri[:60]}...", file=sys.stderr)
+    elif _db_uri.startswith('sqlite:///'):
+        _db_file = _db_uri[len('sqlite:///'):]
+        _db_dir = os.path.dirname(_db_file)
+        if _db_dir:
+            os.makedirs(_db_dir, exist_ok=True)
+        print(f"[DB] Using SQLite: {_db_file}", file=sys.stderr)
+    else:
+        print(f"[DB] Using: {_db_uri[:60]}...", file=sys.stderr)
+
     db.init_app(app)
 
     app.register_blueprint(auth_bp)
     app.register_blueprint(prediction_bp)
     app.register_blueprint(admin_bp)
+    app.register_blueprint(doctors_bp)
+    app.register_blueprint(appointments_bp)
 
     os.makedirs(app.config['ML_ASSETS_DIR'], exist_ok=True)
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
-    # Ensure SQLite database directory exists (prevents instance-path ambiguity)
-    _db_uri = app.config['SQLALCHEMY_DATABASE_URI']
-    if _db_uri.startswith('sqlite:///'):
-        _db_file = _db_uri[len('sqlite:///'):]
-        _db_dir = os.path.dirname(_db_file)
-        if _db_dir:
-            os.makedirs(_db_dir, exist_ok=True)
-
     with app.app_context():
-        db.create_all()
+        try:
+            db.create_all()
+            print("[DB] Tables created / verified OK", file=sys.stderr)
+        except Exception as e:
+            print(f"[DB] Table creation failed: {e}", file=sys.stderr)
+            raise
 
     @app.route('/')
     def home():
@@ -70,4 +91,4 @@ def create_app(config_class=Config):
 
 if __name__ == '__main__':
     app = create_app()
-    app.run(debug=True, port=5000)
+    app.run(debug=False, port=5000)

@@ -1,0 +1,5 @@
+# Binary model files — prevent Git text conversion corruption
+*.keras binary
+*.h5 binary
+*.pkl binary
+*.weights.h5 binary

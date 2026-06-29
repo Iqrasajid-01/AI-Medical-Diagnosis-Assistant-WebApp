@@ -1,0 +1,926 @@
+{
+  "html_attributions": [],
+  "next_page_token": "AaVGc3kD8gYTYvWq8I7UBDdpTVoH6EMBezWFFnn12zpogehEWbtouM-PtBmkX3fWHZVnIZ8Cfg_5JChI07x0YLsJ2tSd153sGpRHTtZXeTqx-bbwpSPX8sXHabEm7ZMtmsNiF_q3SDDUy94tG4EZ8_W-zI5yp26h-ID4Ls_IDrYdr-mdsGdNq5NqIh6kzXIqRrEsd5PjQQ_x2_rVlGlvZgsLnnl4k566M7BA_XzU8UElTGrkd_Er9a1rkUr7pQVn7ZxyGEYOepxaZ33tfLfrpUbAxP9Q-r-QRG0yfajODDEYO0lLOLDq0Ehc5GS4JAJXyWuEwRG-vacu4DYXMuEKjWn5--c2GHFgPesSrVkGfeUj0inUznytgEUhGGOsojhD1VehKqAyKsyPZh-lL5AlFEgv6Qef6yM6mhg3Zvsj8tUsR2kvhHjr0Orgx2dKcKYAN0vtMhjPOgXcVw",
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.6680191,
+          "lng": -73.9842858
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.66940702989272,
+            "lng": -73.98291412010727
+          },
+          "southwest": {
+            "lat": 40.66670737010728,
+            "lng": -73.98561377989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 718-788-1688",
+      "name": "Dr. Vinod Patel",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2048,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116921274689475273146\">V P</a>"
+          ],
+          "photo_reference": "AaVGc3lhITGdK3vmk1IpanxdsyEk4IkGfDTQWacHBfQFvvcfJjlcw1pSE4n7gzqfVQ9yORS2zo5H2etphrfNI8xDtCcFeSEnOCzELWR1Q4kBLvFyVsKhQjdsZwQC7YtweUpwt84K_fNL9OR-EmucLPzg_ZrVAJboIVcPoVV62jz-G5v2Xu7mLLjtBB4qZRifL4UTMSLipqK8NgKjMEz5uFkvTJgV0zrRyUblp7-vm0WekgSjrqfLt5ohwy2EVbP3PszZoXaVYLxDiQEJdBqVViJhxt4UNzLCFB3SvQmK_2xucHuqA26XylPMl-rEQudeELBXX4DnmkT3gfD9x8gqUMglxzACovfGU6JNKNlaq8pXlybRzf93c1803oavH8B1Z5wl7MhpXxXzHhXnBVZjBxlTi2gtsNWVNeLtpoF0wcYJXIYE9kE6PUx6-6CEPa4CJR4lsSTJU0S3vyHMyzjCIPD2G2uHjk2xu7prxux7Wp2_9vVj7NjcD4m0-V_6e9LALhaAce9GujRRstp1UJlw9x1n2UxkgMz45N3sOP-MMvZE2vO_6U_aM9hOus_aKEh9MlBxgIiNVB0L",
+          "width": 1536
+        }
+      ],
+      "place_id": "ChIJtVqxbf1awokRlbziG9QT09o",
+      "rating": 4.6,
+      "reference": "ChIJtVqxbf1awokRlbziG9QT09o",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 116,
+      "vicinity": "370 9th St, Brooklyn"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.7562369,
+          "lng": -73.9695737
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.75754702989272,
+            "lng": -73.96822892010728
+          },
+          "southwest": {
+            "lat": 40.75484737010728,
+            "lng": -73.97092857989271
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 212-906-7798",
+      "name": "Manhattan Cardiology - Midtown East",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 450,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105169692626689111884\">Manhattan Cardiology - Midtown East</a>"
+          ],
+          "photo_reference": "AaVGc3k4J1Jt9ORU6pq8Z1I27DbCzrLIJDd4uL5lWDW9tHptQPtfYDKktBZj9JIwLjldlV8lmDjlAptOWBc_Qwu9qZr6kgb0up5DF7_KT7grS_L8OlgJ9haSB-KASpd2QU1sDZrfFgyg3r7ObVtivqVUIC7ZrceH9JKhdYyDFMC8nKsnv6KuDcxsOmu9JNsPy2xTR_l5heTQMna0kMY-7gXwA_RztPoortL3iuufd1DiVbzoKbAxjAQeTLZIhbvPEyAHPrPGjbMV6ZJZzUft3dC5vL7jdx5db9YYDkK0OLm_CPddOiZqbLBA2yhnfMmFjF7CIz2BUvV-GP_sxkh6_j4bFmRUbXslKqpVU9LcXa0kzX2z0QPbuHmXTM_AAnxPJ8HtJSrd-MN_0eQSWbx2jXLVz6CYrxyLtVe0FP4Ez2wgMm2hKlnieJd4yhu7xbNQP8NTfc9AEp0qYKQEVybJ5TYBiLHY3iuRkb17tw6aC-FwEbfokwOey3e43RSCG5z2q6e1TPNE9g18xLKbFoi1hgoXbrzGwQ-d6WEiyLgfZIN8OSAl8DnNLYmbcOINYtJna8PdoPPUIIctNaK2Sg",
+          "width": 674
+        }
+      ],
+      "place_id": "ChIJhZayGeNYwokRuqXTt_L8-Ws",
+      "rating": 4.7,
+      "reference": "ChIJhZayGeNYwokRuqXTt_L8-Ws",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 952,
+      "vicinity": "211 E 51st St, New York"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.8052088,
+          "lng": -73.9927822
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.80650132989273,
+            "lng": -73.99157737010728
+          },
+          "southwest": {
+            "lat": 40.80380167010728,
+            "lng": -73.99427702989271
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 201-941-8100",
+      "name": "Dr. Fernando Segovia | Edgewater, NJ",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 7728,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100032027164516212540\">Dr. Fernando Segovia | Edgewater, NJ</a>"
+          ],
+          "photo_reference": "AaVGc3l9qZjOloqVH5gYAi4TtWeTdhandl0GxMpK92fnSM_t4vTZPqCPJIAgsiQkehXH87C94_-JBkGre7vYXjKfhSB8vxeL-PGE46R0hLy3B-EhCuXGXnoyO7q3XRSmyGzXIIpbp6S1GDXwfCiLs2NpcChlIbvNP4RYFgoM4KfUScIKJqOVE7CMMDJFGYBoya9c8Xy8dh1-lNmSowNttTJSKPl4C5CwXIB9qp-ExYpoLdpszMBoZKmviHiCYD81Q9EnNOGmYZqcIEk5mKf7TFn_EyHM36XQtFNahs_7DumYSxthW1JajI-n434VR4u_vUX-zJS5hqilV0x8fsqaC0fVXyBX_O7bIinGzB_NBC5Fn9jKQwSgGeu-2J11nf9wQA34tUxxAECPb5UI2ygpOMgUMiLbkIH2wZn3vSiL9b1cUtsNI0r-z8GhcpaoU6hiocZcj7Id82voxVurbmJ1lctSY6JCrthv1AQIAUQ5qB69ESFqQXXmMP1RsAi5af_T3SF-pECdfTUNkDTBx-RHmJ9oAAtaSNUfG-xfNQ7cE_mw-X6rxOvAAcZQz0vsqMvZEECSNXcbmfe-",
+          "width": 5152
+        }
+      ],
+      "place_id": "ChIJ7eF2O9D3wokRG-1upPmHM64",
+      "rating": 4.7,
+      "reference": "ChIJ7eF2O9D3wokRG-1upPmHM64",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 68,
+      "vicinity": "103 River Rd Unit 201, Edgewater"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.7655815,
+          "lng": -73.9640269
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.76685742989272,
+            "lng": -73.96275112010728
+          },
+          "southwest": {
+            "lat": 40.76415777010727,
+            "lng": -73.96545077989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 212-223-1025",
+      "name": "Manhattan Cardiology - Upper East Side",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 5385,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114872914416856272690\">Manhattan Cardiology - Upper East Side</a>"
+          ],
+          "photo_reference": "AaVGc3lDXZuEqSyDWyz3BPxXJJnGjD29-sLcFhNV2NY3gxDBZPyk16UPbyFpeCPnMKqR__wF_nKbnHiARfbM7jLlaGB-FotB3sMc3avd9VefUoJ47gQ3_ofvmvN2saJjbMaOoqKs-F0Ffe8Z_lunMLN5cMYxvo38IMgO_PooV1tOwc99yBZmktTu3iqcr5CrE7uXw4cLRh_o2k9_AETtacvzIYrbcDaVkCV9onSUswcv7JFvDVI9_RL486xyV88ItEO_V3KWHkWxLki_EDa5iKMgVQ4i_5U89wdMAVxiN6OltxfUBQgFb5VcFxbce-O5dbiJaLMUm7f0NQVoiROa4eeFAhfSZY6m_zg8r08OLvUQ43_MGqlfFCeed458LAcSiwi2AjiyeAmhH7ItfaHaSQ0Zj22VQJxckZyI_vA3jbaghJ4ePqUO4y7Wd7fLOH7hJr9cct45n1cbsVuKVnpyqJlB0gKisBxB3tf_SUZCYBgvPQQYF63Z_fgbs6UXn4OJrTXRnHMQlfhDdOVgoWFC3cSwKAGNN1rvvnZrgM_xvg_CzQm2nwnG8s7kPFqxe9gMGlhg7yPFHMLW",
+          "width": 8078
+        }
+      ],
+      "place_id": "ChIJvYpJUMhZwokR2nszASxop6I",
+      "rating": 4.8,
+      "reference": "ChIJvYpJUMhZwokR2nszASxop6I",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 492,
+      "vicinity": "171A E 65th St, New York"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.777349,
+          "lng": -73.979334
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.77881442989272,
+            "lng": -73.97789997010727
+          },
+          "southwest": {
+            "lat": 40.77611477010728,
+            "lng": -73.98059962989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 212-920-9196",
+      "name": "Manhattan Cardiology - Upper West Side",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4128,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109097525250157657575\">Manhattan Cardiology - Upper West Side</a>"
+          ],
+          "photo_reference": "AaVGc3m0xYHnXy_hi6bUfvFxMVl-nHcu5Kcqu1NCAquX5Bv6J6o4HQuM6jtDohIZXWdCdybC62k7j1qFxHp5h7zCKttC4sqjzWxtnlYRVlrYbNuoKlmHadKYrouSc7XMZeWT3UTn3FVk4lLye7L9S2EQjj2TivSgz_vvKpRc1VR9tA8M0RFl492dOWIAAFff49ou4zeAgjSIo9ADwZJtbZ6_GkiA8v9Kc2XMWmh0EFbf-LEjDuh57yOyC-Gg5KK7MuaEb9x3AK2J4Zko-4Uh8lE22pX7BwQ3LIHx_02v5j2SNFjv7MmtfnwzaS5Ibk6Y4bP_zfXBX59p0F1oXcmrjQaljNNxVaJXJG5W7FTXG9IS2xisxpIbMaR0nfmCEn22ARWYL7BzEKctPemRPPNTzXyHLZTjky3xGmYWeuHFjK0GAGg-MV_WHsUsI1lfeROYlVaFg0Sk-up1RoSSmOPOFdlsGjGABh0Lx6-rigrprDt4mUg4sUJSUthrlQQkTExacxKwxQvNOOcux9VbrUDhE0N9E04vp27qhGhqFoKHC_bexLEGa_yPImgGOQDlly806OHqrWtzXKrRYmPFYg",
+          "width": 6192
+        }
+      ],
+      "place_id": "ChIJNaol84JZwokRjOxqK6s9eTk",
+      "rating": 4.7,
+      "reference": "ChIJNaol84JZwokRjOxqK6s9eTk",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 301,
+      "vicinity": "112B W 72nd St, New York"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.7749866,
+          "lng": -74.0319935
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.77639957989273,
+            "lng": -74.03085537010728
+          },
+          "southwest": {
+            "lat": 40.77369992010728,
+            "lng": -74.03355502989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 201-758-8000",
+      "name": "Dr Raashan C. Williams",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1201,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/111642839676583670526\">Dr Raashan C. Williams</a>"
+          ],
+          "photo_reference": "AaVGc3mc33ELz8MLW7-m5UnADCOWPz6QJEj6AZbhv2QOthiqiEyS4Rge_cNSvffPBXa_cV_IPVoMBTOj5sAITe1RoSuB3xyk4qkPnMtWqsrwpQR1FoPsqbzamr-8f56Dfm6VjsAOU0dNi1wjxSvW6pJqDyN2iE_HVPWLVDgz6NlymdFPMQipiOpxcMmP69W7QlBpc62ApuPvxbnCkhxJErwhxqK7RrNqYuGuwLIyxtveD9m7vkCxDBmKfF8VIoG8UUTS8Vgp4Mx-rQ3daxVHFIGEHiSDdg7Zht0gJd__cKUxqrCI9enOJVey8jRDuPN6bIjn3x9_YoMJRP2XLLVwx7mY-1uLiWNjTzEDYrnqdToR_y2nZRDXV1_aw2tI9w6FKtEUFE_cHizVvHNDPixa2xd-alBcicdtfe0y4pTohxPbhzYu9_Nkuk9CjfAMUCqNVETPB9IUCMzFj_JBfBNvtdyV7gatOTcI-xQ9wydwyIRD1YIfTj3gAvQupNHMW3N5sbygR3uiS5fQIgKHQYiqixHR6Nt9wcREV4J41tDkt5Ifraj5a771fcQhYpviSw8L1AXF-nBENujZ",
+          "width": 800
+        }
+      ],
+      "place_id": "ChIJ7cmrYD1YwokRxWHgSfkrjog",
+      "rating": 4.7,
+      "reference": "ChIJ7cmrYD1YwokRxWHgSfkrjog",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 66,
+      "vicinity": "3196 John F. Kennedy Blvd, Union City"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.7940995,
+          "lng": -74.0690707
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.79542487989271,
+            "lng": -74.06763262010728
+          },
+          "southwest": {
+            "lat": 40.79272522010727,
+            "lng": -74.07033227989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 201-866-5151",
+      "name": "Dr. Rick Pumill | Secaucus, NJ",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 5152,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102628909479352062180\">Dr. Rick Pumill | Secaucus, NJ</a>"
+          ],
+          "photo_reference": "AaVGc3mWuayRxdNnyQFPoO3DxiYEShitdCv7gZdjztEtEK5Sbv_z_k0WvP7YLTMelaUfvdAmgZv1Omh-oT5xJ8i_s3B6BzABRHecUwcJeFpdqT7naEZt5HzcE63QU9EmOtJTodkUfyjmdEoY2bpjXuIsjGeN8adEq6QPF5nl42pEiVRNLzFixpKubzjmjaagPK49HQy7m4vStOJJP7fx7U3EAuQlvNeDaZxfKaGKgZovrUlosvPGzdT-cZL6cZULn3P7DWssrMhUsOaVDCek1gCXdkwhbvZs4Nxk3yNfr6c1ffvD8ekq8tkcT4aeiIP0RGK3uwC-WcCiUeJ2ZekJXDxKOXjDJvJ-U399OxgDd7G39uTRPr5ECsis3_HCg_YzYpEk-qnN1SxzM8KgtekT_xRL8JABocON0wAxqTlXQXjeFACnz_rbwgg22WIlIEjBeabTxY-rxHwpYOs6wQjqlz0F7QMf0otnCQvBbepnIlXZ32khYKHvT2Tl4d9nIDmHcJtgunFV8O9nZ7ZI20t4FxtASzHsLNji2iY6Dozr9axPcRBaFxCdAIk9Gecg36TgVsbCGBwtFA",
+          "width": 4528
+        }
+      ],
+      "place_id": "ChIJ7eF2O9D3wokRdIXLkkZtT3c",
+      "rating": 4.9,
+      "reference": "ChIJ7eF2O9D3wokRdIXLkkZtT3c",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 171,
+      "vicinity": "38 Meadowlands Pkwy, Secaucus"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.77171999999999,
+          "lng": -73.9467052
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.77314562989272,
+            "lng": -73.94550932010728
+          },
+          "southwest": {
+            "lat": 40.77044597010728,
+            "lng": -73.94820897989273
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 212-752-3464",
+      "name": "Upper East Side Cardiology & Vein Institute",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4923,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110675971457141172876\">Upper East Side Cardiology &amp; Vein Institute</a>"
+          ],
+          "photo_reference": "AaVGc3l4_igVI7WGuDmsFhjJRxFnZgqr85pq63aJiZbeVo39nLxVrY1ZBmbvA7kipOoOtySo0JdD5NyL-O_Ev6qDcdU_sugH3sJIUKxwHiq-ZDzFe6-HOBxxgHRSSDy8_5sRSfYrxJRN-QTzVk1VmxTK5A4JtQuP7ckhMx1SVTZf1LqkLVqI5bQI_Adybx4AVpwJhIrsbscItOOtXTHPdikGpU_mcOinp0qXgOy14UyGSKGbHUWBB8EUiIQFCne3znzbptDZSnQnDJDr7z3UCiIyMGRKa_b0flSaFC-8CkYek-IfEWam6Z82Ggn7BL50N9Jj88cOYkIcKQIzS8lYWVPoj_y1bdSmC9xUFa5i3IegZliv5tzQyXad_UJNgqcPygMOBE-b7baBlRnfcn8jiI3FxvCdpV8l9E76fulRHyJ_G-cdWSd3s-Bue9BVxrd8dlyYCZ0zPMZ-uH8SVls9Ahpx4rM0P0jgjYL5tYqXiXjnKr96y6OdHoeq3Yd-3J9lQ_vvXKh41XH-1jIqJMjXfzSW8djJ80HEK9wLIi-nkzdhQOm6L0pcffwISXBby03tBbTYiKJy9tXH",
+          "width": 7381
+        }
+      ],
+      "place_id": "ChIJCUuTcpVYwokRGhQtZhIFQB8",
+      "rating": 4.9,
+      "reference": "ChIJCUuTcpVYwokRGhQtZhIFQB8",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1062,
+      "vicinity": "45 East End Ave # 1s, New York"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.6283421,
+          "lng": -74.0258731
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.62969877989273,
+            "lng": -74.02459422010728
+          },
+          "southwest": {
+            "lat": 40.62699912010729,
+            "lng": -74.02729387989271
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 718-491-4949",
+      "name": "Dr.Spyros Kokolis",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJZ2IxOFlFwokR5CYgpxdllyA",
+      "rating": 4.5,
+      "reference": "ChIJZ2IxOFlFwokR5CYgpxdllyA",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 51,
+      "vicinity": "7803 4th Ave, Brooklyn"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.763086,
+          "lng": -73.9129938
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.76443597989272,
+            "lng": -73.91164162010728
+          },
+          "southwest": {
+            "lat": 40.76173632010727,
+            "lng": -73.91434127989271
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 718-204-7200",
+      "name": "NYU Langone Medical Associates - Astoria Cardiology",
+      "photos": [
+        {
+          "height": 1280,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112157828851828895001\">Mirjana Mimi Glavan</a>"
+          ],
+          "photo_reference": "AaVGc3l3jAi-oK2kYvDGaHhRbSOAod8KJYNLWAY6UL5X6m6dkjMiIOVj7Iv1-ZTG-X8dEgh6C8RzaKtwGO6hFDY69ss0YKXp-N5_VZlDTW3V5zEyl9Xn3v4FiAbyxivQ5-WLozG-pQvV1f3E8Vpxf0EQ8DwVuEePBE1wk8akoq77BDjqDztc0hNQVR8KgFywOUpaGQHSaYTQJsSrZCqss91uHazUWesxflip3jPqlE5uj_p0LRlocGF5BzWiXGQ16jBlDXMZwAyeyP3X77evW3TbP0HzLb9TI1bP61eQibeaDzolJP9kyRUMdjg49rW6jHI9AyIINbjUSmid4apM8GeI99TkZ8X8b7YqiF5fiU8x8B8YXfrsjFEzxK88M030u10BXCoWiauIfT29ZcHd6S6msAcihaGib6mjTqUIn5e3tSJOd9Qx7OYNilOp7WmIYiKdXcQHFrgjKd-zAKVm-cNatGfgWA4V_JI6cdCmJT09Tyth1VbjRiW_w3CgDTHvTxGIot_-DjqC4wi1nSTdqDjTy7-OvnutzVeUzOrYGYF8JPCmWGnY_i2L--FSVS8JQ97F1s8fpJsFPaltUg",
+          "width": 720
+        }
+      ],
+      "place_id": "ChIJXTo12j9fwokRgYzn-N_2pWo",
+      "rating": 3.7,
+      "reference": "ChIJXTo12j9fwokRgYzn-N_2pWo",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 19,
+      "vicinity": "42-07 30th Ave., Astoria"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.7940216,
+          "lng": -74.0691223
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.79540992989272,
+            "lng": -74.06765842010728
+          },
+          "southwest": {
+            "lat": 40.79271027010727,
+            "lng": -74.07035807989273
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 201-866-5151",
+      "name": "Cross County Cardiology - Secaucus, NJ",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2252,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106545788687714170431\">Vinod Kuwar</a>"
+          ],
+          "photo_reference": "AaVGc3mb8TWd6u56UcmzoXi09w9tKm1sg3T0aHMWj8NnzI0WZr0kSwREARmhZMvs56JtDuU9aINxmEvK8emnqXaMdn3BXkroK4KLlxd5KBP5BurzYE6dV_BhVPodkIv_ZGHu1UCAKn-h9QXgJr3Z_xAWFF4KOOu5__eQ0hNFJZV75DqyX3cb49gN2fiND4MgVEV_xmx5tY2WcpY1MaZH0LiOB4gvd8X4nXK53EwvCxF3zbOW79s0Va9cQCI-f-v0PPBi1pEbAvPBdqlrfvs350Q1sHp5Z_zropr15e6bWqNHO86KK14xkULWlUmhYrxECDffmMrTCnFLuxIlS3AYpxoawVExlmCqmZ22blsIOf5Yy6dfvRvn1Ce0j0GSgi5zcUT0zxuYLWIlZU3U6Q5fF3PpJUS1L1MmHfTqvM26839TROex7Az0iai-TGVzNWbEVqTq43av8Hdklo9wBoSM8wA3X9hwV3x7sr0UzzdNTI28pYdYKZ6i_nP4I8wngdTIaF2VR93UGaTmkLX0dJNfaXAOmkrNaMVVKosLOCiB0HTdnPNbRkwFKyDmB4onUm1g93Apl8RqfizbluH_Wg",
+          "width": 4000
+        }
+      ],
+      "place_id": "ChIJTT_39M5XwokRDTXUl6FA2Es",
+      "rating": 4.8,
+      "reference": "ChIJTT_39M5XwokRDTXUl6FA2Es",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 93,
+      "vicinity": "38 Meadowlands Pkwy, Secaucus"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.6064017,
+          "lng": -73.9605271
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.60773912989272,
+            "lng": -73.95931597010727
+          },
+          "southwest": {
+            "lat": 40.60503947010728,
+            "lng": -73.96201562989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 718-419-8084",
+      "name": "EPHRON SHOHAT CARDIOLOGY",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 450,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115347295119606201019\">EPHRON SHOHAT CARDIOLOGY</a>"
+          ],
+          "photo_reference": "AaVGc3kH6Pbj-NNC1VQDTpawf0N34RKg9heISFuwrvwsMVPJ6fAe18rV_JQHnjI2qp0-5XeN2cQi9kP8Jkk9bfXipNlO9bGG4zd1SRjgr858s3UxakdxC4qj6ROgH2vr943euAMIY3K46RGBEJiwPNFrPmiavNtl75LklEA9aWvgCLJF-68VMvIB3F8POua286_TcXhQu4T2LNhZW0NgAcxCALbdejOQIyyhUmTkktYJgOW02uD9cY_Sv5dZMQUwgQKGkn2B3fb5pC2oc8TU3gUu6hy87KXDDPcbLhNb7pZ5vPGqBLgxLjh53ZfrqrsoZZC-tE98K9SJKAR5bbSUtPNdeUbcrPpWw-txhs-UwqP9Sx1cIBsubEGZiqMwvBJ8J5GETeN3C8qe9XmjuDShp95HUoBrvcErcTz5Oexenhzgw7dSHSlDF6dy2NQ8EDwJvXAoyMVN-OcLffOi-JwfvrXB2SYMq2Rh0VxRRv9hKJ5ar361JSzKTGP18fobU8liW-ufICaTLniWyFscmDhniJ8BjzMzZgtveRDk5Mb_70yeIcUKla1I8J7ZZD3o5ry2NvX8U5Y4jlIV_amF7g",
+          "width": 675
+        }
+      ],
+      "place_id": "ChIJz3Kw2-xEwokRx2xSQaUH5As",
+      "rating": 4.6,
+      "reference": "ChIJz3Kw2-xEwokRx2xSQaUH5As",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 46,
+      "vicinity": "1763 E 12th St, Brooklyn"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.7563696,
+          "lng": -73.8323254
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.75759032989272,
+            "lng": -73.83089097010728
+          },
+          "southwest": {
+            "lat": 40.75489067010727,
+            "lng": -73.83359062989273
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 718-353-0468",
+      "name": "Dr. Wei Li MD PhD",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 388,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103768707419262252874\">Dr. Wei Li MD PhD</a>"
+          ],
+          "photo_reference": "AaVGc3k2J0XGj0FPc618xhvpvhIOf8-sh-Omo0sxw3SerSeoKtabbSoFKAh-9TWh4KIvBeV0cfi30Pk2JOw0WweBmDtw2bPqVCh6Vyv4nrboJDJteeIBFkFRMMtze-DgW_vFmXm0ihw1kpeFYtB1DC-H8kcyGTXheODS3LC0Yp0KmdlkvYNwJoTP7jI6z_pk5OXW8SJU9ZComQF7RQAw1m7kKOteDSuxliA8-inpkXTUJZJEm9e0CxEYR-JmYYin0FpZ4nu3CbH43Ycm3GkOjPXR26XtYCv123HlSKWLIrjg-KbHvR3_B0JeAMlzB5qzPvJuN3b78zLNpLApUMsDHPuzgo798eBNAx4Tgg5ruVODH5xeZ-BCpoG7zJT8j9JxnfHwvxx0NvTSzwHRgjOOjnabmqCn53Uu74JibTWOtcGNgg1ynjH95Sp7DURoDxsz7BOGct22zLeiI_bRCV22SyHOyUCLNSSofkpY-c9y1J6MfeX7VcBOgOH5YDELTZhsU0uZA6A3QH8oXgrqrjht7q2TbSzlrU4wrK8XzPu2MZyTM33f03AT7HoGWoLwX3UMIgRE6ei-4Uh1b9_byA",
+          "width": 369
+        }
+      ],
+      "place_id": "ChIJ0bkrpA1gwokRtPV-uOfxeKE",
+      "rating": 5,
+      "reference": "ChIJ0bkrpA1gwokRtPV-uOfxeKE",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 36,
+      "vicinity": "132-37 41st Rd C03, Flushing"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.6090633,
+          "lng": -73.959413
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.61041227989272,
+            "lng": -73.95807052010728
+          },
+          "southwest": {
+            "lat": 40.60771262010727,
+            "lng": -73.96077017989273
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 718-787-0400",
+      "name": "Don Bandari, M.D., F.A.C.C.",
+      "opening_hours": {
+        "open_now": false
+      },
+      "place_id": "ChIJ_7nKrJREwokRIlMO3qcJvLE",
+      "rating": 4.5,
+      "reference": "ChIJ_7nKrJREwokRIlMO3qcJvLE",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 33,
+      "vicinity": "1652 E 14th St, Brooklyn"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.7048244,
+          "lng": -73.89594029999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.70614282989272,
+            "lng": -73.89467117010726
+          },
+          "southwest": {
+            "lat": 40.70344317010727,
+            "lng": -73.89737082989271
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 718-497-2322",
+      "name": "Dr. Marc N. Sherman, MD",
+      "place_id": "ChIJhc2AmYNewokRAK89F8lfLZk",
+      "rating": 5,
+      "reference": "ChIJhc2AmYNewokRAK89F8lfLZk",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 12,
+      "vicinity": "68-23 Fresh Pond Rd, Ridgewood"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.7644429,
+          "lng": -73.9540688
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.76564362989271,
+            "lng": -73.95284442010728
+          },
+          "southwest": {
+            "lat": 40.76294397010727,
+            "lng": -73.95554407989273
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 646-962-5555",
+      "name": "Maria Karas, M.D.",
+      "photos": [
+        {
+          "height": 560,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107855380228372017470\">Maria Karas, M.D.</a>"
+          ],
+          "photo_reference": "AaVGc3mgGtDr9xWJBiwjgeLNg6jviWkeww8VlBqIg8rp2G4ZNx-Bhi9RYYHACutBARjf9KE0Bjai-7FYoOaqxJ53j5oLSyLj-yi-dgcBLcLUa-FI-YYyf8_s6Xryu1Fay1Fxo0Iy9FQ2ByoWf5a3wrI6g2BipIk0Y5Wqz7xM5_OoLbkTEwjqlwGafziReXLE5VfGbTPs885eKbdbZNnPAz90LP298xvSwnxKHKZsO_oqQ2ki4BRiRNZYegyjnfINwFcjvnJSet5xhqbdlokJ4gbEtqZPrAyAxgICz3W8hh8YObaTpsy_upGc7o8iomL8XCJlmk1DfJI0DqbWffuJ1A_e3DDAN9JkGNCYOVuq9NXb1GD2TehUZHHkqcWPJ2ldu-N9SBPZs_qlReoNN3swwLqGSqRQZ1TS4dOKzyu4PO3gNnJqOlPk2Psi2oYz5etH6Uf7o5VCJbA_E8e_3EiL-fL9aNLa730Jy498nD9tsR5qFSIEGR3iFrqHQzhVKENV9njTkihCMiGkZsSlg_1DLQbOJxpXaIbVSLwyO8baPSQvkd0lINO4mwS393Ho_c0Y_y0Ir0ibVw",
+          "width": 420
+        }
+      ],
+      "place_id": "ChIJu7sYmMNYwokRkNGVyze9zac",
+      "rating": 4.9,
+      "reference": "ChIJu7sYmMNYwokRkNGVyze9zac",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 187,
+      "vicinity": "Starr Pavilion, 520 E 70th St 4th Floor, New York"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.7484683,
+          "lng": -73.9772785
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.74989767989273,
+            "lng": -73.97588812010727
+          },
+          "southwest": {
+            "lat": 40.74719802010728,
+            "lng": -73.9785877798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 212-679-4488",
+      "name": "Heartwise Cardiology",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2460,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105170431124683218627\">Marc Gonzalez</a>"
+          ],
+          "photo_reference": "AaVGc3kpiWELFSc7hvObFHjAlvqTc0Ak_amqzBTJiDgY3T-O3wg_ucrhwQFyELBg_pfvbdDGWdZrwOpFOyqJnJfsyQe4_44Sz4yn-viNvLZcWwBhQXq-Z5MDkCPRdIl1HAvS786OM48lt-PTQLuwJChwtTiBI-AVaKTigBlJQALUidbO9P-zAW06KgY0Jph1XYttTTI91RsXLybrBFZ9nHRu4NndKiplrmlpxTjnnAXOI3UohoUU8wJ9A4aCD5A81n7vrKFXTWrad0X-iMkKBKo7Tb3ETz4sTHqHqW8pw1jhy0o2lVcdhgubWiaKmelz5Lkt3Qh86MEaPkDxG6qS75cm3c6LzgnllR0IcDs_S3lK6jhtk3HAQx9CY6N-PTeeEeRqlnbY0tnp3CfBiaZUBgrj3iTkQz3vTR3OPWOfaTZtgX-1Bw_MwLzqgXnpe4A_AJT6LBYjIvIMMddOvZtGIFy4WDJOScfQgtV4nChYaxBR5_8I3fyzFexl-NND_74LlJ2dQcKFk7D2KHYSoz-X9v6zh14-hf9iZIljduaJyZR6xvl8KpRE9fG54A4NUNAjKk05JKjqEPKGfWQJxA",
+          "width": 1835
+        }
+      ],
+      "place_id": "ChIJ--W5pgZZwokRFuVGTVt5gzQ",
+      "rating": 4.9,
+      "reference": "ChIJ--W5pgZZwokRFuVGTVt5gzQ",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 289,
+      "vicinity": "148 E 38th St, New York"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.7644429,
+          "lng": -73.9540688
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.76564362989271,
+            "lng": -73.95284442010728
+          },
+          "southwest": {
+            "lat": 40.76294397010727,
+            "lng": -73.95554407989273
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 646-962-2243",
+      "name": "Harsimran Sachdeva Singh, M.D.",
+      "photos": [
+        {
+          "height": 560,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113958497797521044029\">Harsimran Sachdeva Singh, M.D.</a>"
+          ],
+          "photo_reference": "AaVGc3nt_5pmfgtosRk1ZlpGVeJ8gso9iKQFfoRtsab2HweP68Dh5XLaMDrObkjLDM7CM5-yWhNooWJJcX_07STkGT4Z_0mFh4S44iUWb6TOz1PHN8n1dFVY00uCKQ102jv2zD-_nZcYgFKVRiqOPuyee4MXLfhZptnxsbyj01SmIq5jbMfSYpikJAMUoiVJZanICb9v_CJM5xn0-Nf8ATt9K0tgcPW3u3CH0K51dPmq9cwbYZBCQk4nLurPzHohVVKS-UurD8yxRm1zcAHwWIpqN0NMmE0evc-3GNnY3ppzevskrLAvc8Nxent4pQTMiuC8bc3tr6N7SzYYdRYuZ3jABU2r18G5NqWplPYKolPWEUcsk1GdbvtIKk0eb920hWK6FhiC6VEt1gG0L9QvaG3nbgqwFN2AtCwjLjlSzWmfc0CtqqlkWO_Bo9huqTcC9vDova0CKdKAkuDQl1aVJjdmjLCjcOZbDps3p26qpjpBf6BjHXwOKEwK44JVll8C5IsNT8PC88uWXzKlgwYWlkpga9k9-M0Xvz5RbY7ox9ZD4mvbi2n_iZVzkjyacIBBLcxLWB_nxzqLYq8ocQ",
+          "width": 420
+        }
+      ],
+      "place_id": "ChIJHejq98NYwokRWjamQfkA5KY",
+      "rating": 5,
+      "reference": "ChIJHejq98NYwokRWjamQfkA5KY",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 291,
+      "vicinity": "Starr Pavilion, 520 E 70th St 4th Floor, New York"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.7260009,
+          "lng": -73.8521373
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.72738282989272,
+            "lng": -73.85079642010729
+          },
+          "southwest": {
+            "lat": 40.72468317010728,
+            "lng": -73.85349607989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 347-571-9389",
+      "name": "Mikhail Kapchits, MD",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1333,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110136362722032577647\">Mikhail Kapchits, MD</a>"
+          ],
+          "photo_reference": "AaVGc3mWUopXJWRLBD6AzgHhHutjnPdWOiunNe_cfiwPAG1wIQVCMNdWE77bgmLzooYM_NA4dAkYhqi1uEjzmQx8dmV6mFlPKkkX5cXQsDZ6BjlC34XQ0muFbTbgivc9k1WF6K07ONmKu6FaBuTPzwwU4iYRU-n6yIdXu4x_WJ7k80Mvk0hwRJx0Rk3qnh9H3P4erSvwBzGw4Nfhj5j3Hucf5gGLPWo2T_C99R2rOkNoubEjribJMxKjLAIAd8BGI-HJwaCecuwWKgklxJBxsd7y1zsQfTiLv3-g_pcpm28Wx6_ZqmQ620xoad8cEzVo0B_JEMOXkUsmro0lH3PF6lX-xZXbSXSWmK04mwAJPsEypNHfoXCeIKb_gGq7gZGC3xeJUPiaFsb6Dox6Gp1MQMhbSMYqxaxxdQr5BeHa20hl-Te_LH7E3B7pYBU0u1lVEX8XlOr9maCF4Et9_OpJSOXLW7U7qnuT4jtx4ACkkQAsUgaD9HaBxJqOGRu7pirr-YNjdNLvXi4YZ8nUdHXIIUc5_3bn-w03GKyCW9CzYKdBWI9MsVbE_VK6HasrpZBfsePlxY7wVizH",
+          "width": 2000
+        }
+      ],
+      "place_id": "ChIJ_WFBLplgwokRKkfT3rYChJw",
+      "rating": 4.9,
+      "reference": "ChIJ_WFBLplgwokRKkfT3rYChJw",
+      "types": [
+        "hospital",
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 242,
+      "vicinity": "101-24 Queens Blvd Ste a, Forest Hills"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 40.7658657,
+          "lng": -73.9667971
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 40.76719847989272,
+            "lng": -73.96546242010729
+          },
+          "southwest": {
+            "lat": 40.76449882010727,
+            "lng": -73.96816207989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number": "+1 347-558-4094",
+      "name": "Avicenna Cardiology - Upper East Side",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 643,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116075091244436628268\">Avicenna Cardiology - Upper East Side</a>"
+          ],
+          "photo_reference": "AaVGc3l0idANBMp0Y-JUb2gF5SqO2h57mJbBRpni-KOg8ShmHrBChgWWreKJz76rnFbhHFVuE9u8pQ8pCMskDy8m-NXP9HhyxC4-WKYfl-4dZKj7Aq3rFyRzgcX7PKCl_6WyZh4M-nMLDbqtKqKnFVYlWJBymBE_sSxLSjuujcwBudd8ZXD7Ep80dqh2keFw7jJIUc_zBY4j1l3XLgB0vSCco5ACN7KOfZh_Ve_T-XWPn1KOMJMdWSfMmeLlDJXT52jRjXO_8JyDvTZfitaAGRWOHqRT0tYDOGwExafjjY2xnobV8Ie02IzRq3qH5khA6fVt0VGPrt_-1etqJegnV285rlDF6bMBOefYecJ6g-vb93Z8gd82iyhJAbtBVHIM_-GnH1s0LXAtQg_bp7SQRcu7W0U3jpllextkcSygCnycSfu0ZlPVhyls1kRZRMWTWsUHLC6dsuHPPxF1Fv9JloQrQsPsuAupF7o0UVAufANsC6ZeKASXXmXbK2mtXZZSWAHEgS2IS9ijH2fC5cwI4e1XNRp0XpKj1dB6EzfDw6B0HGWOqlHiGs6tUoSYNH5wBqKrteLdHTrd",
+          "width": 900
+        }
+      ],
+      "place_id": "ChIJQTgvt2NZwokRB0M2QVncnW8",
+      "rating": 4.6,
+      "reference": "ChIJQTgvt2NZwokRB0M2QVncnW8",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 67,
+      "vicinity": "115 E 64th St Suite 1, New York"
+    }
+  ],
+  "status": "OK"
+}

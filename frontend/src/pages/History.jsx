@@ -46,7 +46,7 @@ export default function History() {
   };
 
   const getFilterBadge = (prediction) => {
-    const severity = prediction.confidence >= 0.75 ? 'high' : prediction.confidence >= 0.45 ? 'moderate' : 'low';
+    const severity = prediction.confidence >= 0.80 ? 'high' : prediction.confidence >= 0.40 ? 'moderate' : 'low';
     return <RiskBadge level={severity} />;
   };
 
